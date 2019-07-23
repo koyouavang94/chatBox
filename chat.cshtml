@@ -1,0 +1,47 @@
+﻿@page
+@model chatModel
+@{
+}
+
+<link href="~/css/chat.css" rel="stylesheet" />
+<div class="container-fluid">
+
+    <div class="row">
+        <h1 style="text-align:center; padding:1rem; color:#60a68f">Personal Chat with your Primary Care Provider Today</h1>
+    </div>
+
+    <div class="row">
+        <img src="~/images/chatPics/compMD.jpg" alt="Alternate Text" style="width:100%;"/>
+        <div class="col-lg-12 col-md-12 col-sm-12 TextonImg">
+            <h2>With this personal chat feature you and your doctor can have conversations at home, work, or anywhere you want</h2>
+        </div>
+    </div>
+
+    <div class="row" style="text-align:center;padding-top:2rem;">
+        <h2>If you're ready to talk to your primary care provider, go ahead and start messaging today</h2>
+    </div>
+    <hr />
+    <div class="row" style="padding-bottom:2rem;margin-left:20rem;">
+            <div style="padding:1rem;">
+                <div><p>Full Name:</p></div>
+                <input type="text" id="userInput" placeholder="Your Name Here"/>
+            </div>
+
+            <div  style="padding:1rem;">
+                <div><p>Type Your Message Below:</p></div>
+                <input type="text" id="messageInput" placeholder="Your Message Here" />
+            </div>
+
+            <div style="padding:1rem;">
+                <input type="button" id="sendButton" value="Send Message" />
+            </div>
+
+        <div style="border:solid;width:35rem; height:35rem;padding:5rem;">
+            <ul id="messagesList"></ul>
+            <ul id="messagesList1"></ul>
+        </div>
+    </div>
+</div>
+
+<script src="~/lib/signalr/dist/browser/signalr.js"></script>
+<script src="~/js/chat.js"></script>
